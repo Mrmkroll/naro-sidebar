@@ -1,0 +1,53 @@
+:root {
+    --sidebar-width: 330px
+
+    --margin-right: 0px
+    --sidebar-right: calc(-1 * var(--sidebar-width))
+
+    &[aria-hidden="false"] {
+        --margin-right: var(--sidebar-width)
+        --sidebar-right: 0px
+    }
+}
+
+main, #novel_header, #pageBottom, #pageTop, aside {
+    transition: all 0.5s
+}
+
+main {
+    margin-right: var(--margin-right)
+}
+
+#novel_header {
+    transform: translateX(calc(0px - var(--margin-right)))
+}
+
+#menu_on, #menu_off, #sidebar-btn {
+    user-select: none
+}
+
+#sidebar-btn {
+    position: fixed
+    top: 5px
+    right: 5px
+    margin: 5px 15px 0 0
+    padding: 5px 0
+    width: 70px
+    font-size: 85%
+    font-weight: bold
+    text-align: center
+    cursor: pointer
+}
+
+#pageBottom, #pageTop {
+    right: calc(20px + var(--margin-right))
+}
+
+aside {
+    position: fixed
+    top: 0
+    right: var(--sidebar-right)
+    width: var(--sidebar-width)
+    height: 100vh
+    overflow-y: scroll
+}

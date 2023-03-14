@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Naro-Sidebar",
+  "version": "1.0",
+
+  "description": "Adds a sidebar to \"ncode.syosetu.com\" and \"novel18.syosetu.com\"",
+
+  "content_scripts": [
+    {
+      "matches": ["*://ncode.syosetu.com/*", "*://novel18.syosetu.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "naro-sidebar-vite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^111.0.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "stylus": "^0.59.0"
+  }
+}
